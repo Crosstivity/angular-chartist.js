@@ -50,7 +50,7 @@ angularChartist.directive('chartist', [
                 Ctrl.bindEvents(chart);
 
                 // Deeply watch the data and create a new chart if data is updated
-                scope.$watchGroup(['data', 'chartType'], function(newDataArray, oldDataArray) {
+                scope.$watchGroup(['data', 'chartType', 'chartOptions'], function(newDataArray, oldDataArray) {
                     // new data object
                     var newData = newDataArray[0];
                     var oldData = oldDataArray[0];
